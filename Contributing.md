@@ -66,7 +66,7 @@
     </li>
     <br>
     <li><strong>You're Good to Go!</strong><br>
-        Congratulations! You've successfully set up the Cloud Provisioner project locally.<br>
+        Congratulations! You have successfully set up the Cloud Provisioner project locally.<br>
     </li>
 </ol>
 
