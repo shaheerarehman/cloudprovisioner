@@ -37,7 +37,8 @@
     <br>
     <li><strong>Create a Virtual Environment</strong><br>
         If you don't have <code>virtualenv</code> installed, you can install it using <code>pip</code>:<br>
-        <code>pip install virtualenv</code><br>
+        <code>For Linux/Unix OS: pip3 install virtualenv</code><br>
+        <code>For Windows OS: pip install virtualenv</code><br>
         Next, create a new virtual environment in the project folder:<br>
         <code>virtualenv env</code>
     </li>
