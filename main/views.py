@@ -5,4 +5,4 @@ def main(request):
     return render(request, 'main.html')
 
 def main2(request):
-    return render(request, 'app.html')
+    return render(request, 'navbar.html')
