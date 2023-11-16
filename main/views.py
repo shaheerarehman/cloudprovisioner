@@ -38,5 +38,5 @@ def deploy_ec2_instance(request):
     else:
         form = EC2DeployForm()
 
-    return render(request, 'deploy_form.html', {'form': form})                                                             
+    return render(request, 'deploy_form.html', {'form': form})                                                              
 
