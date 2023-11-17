@@ -5,118 +5,114 @@
     <!-- Include your CSS styles and JavaScript files here -->
 
     <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-      body {
-        font-family: 'Roboto', Arial, sans-serif;
-        background-color: #f2f2f2;
-      }
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
 
-      .main-block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center; /* Center text within the block */
-      }
+  .main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
 
-      h1 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: #1c87c9;
-      }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1c87c9;
+  }
 
-      form {
-        width: 80%;
-        max-width: 600px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      }
+  form {
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
 
-      .info input,
-      .info select {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: border-color 0.2s;
-      }
+  .info input,
+  .info select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+  }
 
-      /* Center text within the block */
-      .info h3, .aws-object-storage h3, .ec2-instance h3, .database h3 {
-        text-align: left;
-      }
+  .info h3,
+  .aws-object-storage h3,
+  .ec2-instance h3,
+  .database h3 {
+    text-align: left;
+  }
 
-      /* Radio buttons and labels */
-      .metod {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-      }
+/* Radio buttons and labels */
+.metod {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
 
-      label.radio {
-        position: relative;
-        cursor: pointer;
-        margin-right: 10px;
-      }
+label.radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
 
-      label.radio:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 18px;
-        height: 18px;
-        border: 2px solid #1c87c9;
-        border-radius: 50%;
-      }
+input[type="radio"] {
+  margin: 0; /* Reset the default margin for radio buttons */
+  transform: scale(1.5); /* Adjust the scale as needed for alignment */
+}
 
-      label.radio:after {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #1c87c9;
-        opacity: 0;
-        transform: scale(0);
-        transition: transform 0.2s, opacity 0.2s;
-      }
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1c87c9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
-      input[type="radio"]:checked + label:after {
-        transform: scale(1);
-        opacity: 1;
-      }
+button:hover {
+  background-color: #095484;
+}
 
-      /* Buttons */
-      button {
-        width: 100%;
-        padding: 10px;
-        background-color: #1c87c9;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px;
-        cursor: pointer;
-        transition: background-color 0.2s;
-      }
 
-      button:hover {
-        background-color: #095484;
-      }
+  /* Buttons */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1c87c9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  button:hover {
+    background-color: #095484;
+  }
     </style>
   </head>
   <body>
