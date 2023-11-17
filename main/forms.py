@@ -1,9 +1,8 @@
 from django import forms
 
-class EC2DeployForm(forms.Form):
-    aws_access_key = forms.CharField(label='AWS Access Key')
-    aws_secret_key = forms.CharField(label='AWS Secret Key', widget=forms.PasswordInput)
-    aws_region = forms.CharField(label='AWS Region')
-    instance_type = forms.CharField(max_length=100)
-    ami = forms.CharField(max_length=100)
-    # Add more fields as required for instance creation
+class EC2InstanceForm(forms.Form):
+    instanceType = forms.CharField(label='Instance Type', max_length=100, required=True)
+    ami = forms.CharField(label='AMI', max_length=100, required=True)
+    region = forms.CharField(label='Region', max_length=100, required=True)
+    accessKey = forms.CharField(label='Access Key', widget=forms.PasswordInput(), required=True)
+    secretKey = forms.CharField(label='Secret Access Key', widget=forms.PasswordInput(), required=True)
