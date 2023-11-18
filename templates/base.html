@@ -1,0 +1,50 @@
+<!-- base.html -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}CloudProvisioner{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        #logo {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CloudProvisioner</h1>
+    </header>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

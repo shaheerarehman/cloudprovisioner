@@ -1,0 +1,17 @@
+
+<!-- cloud_app/templates/cloud_app/choose_cloud.html -->
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Cloud Platform</title>
+</head>
+<body>
+    <h2>Choose Cloud Platform</h2>
+    <ul>
+        <li><a href="{% url 'aws_deploy' %}">AWS</a></li>
+        <li><a href="{% url 'azure_deploy' %}">Azure</a></li>
+        <li><a href="{% url 'gcp_deploy' %}">Google Cloud</a></li>
+    </ul>
+</body>
+</html>

@@ -1,18 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import boto3
-from .forms import EC2DeployForm
+from .forms import EC2DeployForm, AzureDeployForm, GCPDeployForm
 
 def main(request):
     return render(request, 'main.html')
 
-def main2(request):
-    return render(request, 'navbar.html')
 
+def choose_cloud(request):
+    return render(request, 'choose_cloud.html')
 
-# ec2deploy/views.py
-
-def deploy_ec2_instance(request):
+def aws_deploy(request):
     if request.method == 'POST':
         form = EC2DeployForm(request.POST)
         if form.is_valid():
@@ -30,7 +28,6 @@ def deploy_ec2_instance(request):
                 MinCount=1,
                 MaxCount=1,
                 InstanceType=instance_type,
-                # Add other parameters
             )
 
             instance_id = response['Instances'][0]['InstanceId']
@@ -38,5 +35,13 @@ def deploy_ec2_instance(request):
     else:
         form = EC2DeployForm()
 
-    return render(request, 'deploy_form.html', {'form': form})                                                              
+    return render(request, 'aws_deploy.html', {'form': form})
+
+
+
+def azure_deploy(request):
+    return render(request, 'templates/azure_deploy.html', {'form': form})
+
+def gcp_deploy(request):
+    return render(request, 'templates/gcp_deploy.html', {'form': form})
 

@@ -1,0 +1,11 @@
+<!-- cloud_app/templates/cloud_app/azure_deploy.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Azure Deployment Form</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Deploy</button>
+  </form>
+{% endblock %}

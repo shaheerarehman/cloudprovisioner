@@ -2,7 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-     path('main/', views.main, name="main"),
-     path('main2/', views.main2, name="main2"),
-     path('deploy/', views.deploy_ec2_instance, name='deploy_ec2'),
+    path('', views.choose_cloud, name='choose_cloud'),
+    path('aws/', views.aws_deploy, name='aws_deploy'),
+    path('azure/', views.azure_deploy, name='azure_deploy'),
+    path('gcp/', views.gcp_deploy, name='gcp_deploy'),
 ]
