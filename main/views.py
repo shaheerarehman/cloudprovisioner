@@ -12,12 +12,13 @@ def choose_cloud(request):
 
 def aws_deploy(request):
     if request.method == 'POST':
-        form = EC2DeployForm(request.POST)
+        form = EC2InstanceForm(request.POST)
+
         if form.is_valid():
             access_key = form.cleaned_data['aws_access_key']
             secret_key = form.cleaned_data['aws_secret_key']
             region = form.cleaned_data['aws_region']
-            instance_type = form.cleaned_data['instance_type']
+            instance_type = form.cleaned_data['instanceType']
             ami = form.cleaned_data['ami']
 
             # Create EC2 instance using Boto3
