@@ -1,17 +1,127 @@
-
-<!-- cloud_app/templates/cloud_app/choose_cloud.html -->
-{% extends 'base.html' %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Choose Cloud Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudProvisioner</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #636b6d;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+    </style>
 </head>
 <body>
-    <h2>Choose Cloud Platform</h2>
-    <ul>
-        <li><a href="{% url 'aws_deploy' %}">AWS</a></li>
-        <li><a href="{% url 'azure_deploy' %}">Azure</a></li>
-        <li><a href="{% url 'gcp_deploy' %}">Google Cloud</a></li>
-    </ul>
+    <header>
+        <h1>Welcome to CloudProvisioner</h1>
+        <p>Your Comprehensive Infrastructure Provisioning Solution</p>
+    </header>
+    <nav>
+        <h2>Choose Your Cloud Platform</h2>
+        <ul>
+            <li><a href="{% url 'aws_deploy' %}">AWS</a></li>
+            <li><a href="{% url 'azure_deploy' %}">Azure</a></li>
+            <li><a href="{% url 'gcp_deploy' %}">Google Cloud</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>About CloudProvisioner</h2>
+        <p>
+            CloudProvisioner is a cutting-edge infrastructure provisioning solution that empowers clients to define and deploy their network and server infrastructure effortlessly in various cloud environments.
+        </p>
+        <p>
+            Our user-friendly web-based form allows customers to input specific requirements, including server types, storage, and budget constraints. Behind the scenes, CloudProvisioner utilizes SDKs from AWS, Microsoft Azure, and Google Cloud to dynamically generate and provision requested infrastructure in multiple cloud providers, ensuring flexibility and choice for our clients.
+        </p>
+        <p>
+            The system prioritizes security, automation, and user communication. It securely interfaces with cloud provider APIs to create and configure resources, implements robust error handling, and validation. Additionally, it generates clear and informative documentation and user communication materials to guide clients on accessing and managing their newly provisioned infrastructure.
+        </p>
+        <p>
+            CloudProvisioner streamlines the entire infrastructure setup process, making it efficient, customizable, and accessible for a wide range of clients with diverse infrastructure needs.
+        </p>
+        <p>
+            While we prioritize security, automation, and user communication, users are solely responsible for providing accurate input and reviewing the generated documentation. CloudProvisioner is not responsible for any mistakes, misconfigurations, or unexpected outcomes resulting from user input or actions. Users are encouraged to carefully review the provided information and seek assistance if needed.
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2023 CloudProvisioner. All rights reserved.</p>
+    </footer>
 </body>
 </html>

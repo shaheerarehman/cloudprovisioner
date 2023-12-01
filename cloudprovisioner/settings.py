@@ -125,3 +125,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# settings.py
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
+# Reading values from .env file using python-decouple
+
+# ... other Django settings ...
