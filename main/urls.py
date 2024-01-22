@@ -8,4 +8,4 @@ urlpatterns = [
     path('gcp/', views.gcp_deploy, name='gcp_deploy'),
 ]
 
-#Hello my name is manaal hehe
+
