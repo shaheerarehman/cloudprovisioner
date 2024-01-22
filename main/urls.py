@@ -7,3 +7,5 @@ urlpatterns = [
     path('azure/', views.azure_deploy, name='azure_deploy'),
     path('gcp/', views.gcp_deploy, name='gcp_deploy'),
 ]
+
+#Hello my name is manaal hehe
